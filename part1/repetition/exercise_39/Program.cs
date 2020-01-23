@@ -7,22 +7,21 @@ namespace exercise_39
     public static void Main(string[] args)
     {
       // Write your code here:
-      int countNumber = 0;
+      int sumNumbers = 0;
       while (true) 
       {
         Console.WriteLine("Give a number:");
-        string userInput = Console.ReadLine();
-        int userNumber = Convert.ToInt32(userInput);
+        int userNumber = Convert.ToInt32(Console.ReadLine());
         if (userNumber == 0)
         { 
           break;
         }
-        if (userNumber > 0)
+        else
         {
-          countNumber = countNumber +1;
+          sumNumbers = sumNumbers + userNumber;
         }  
       }
-      Console.WriteLine("Total sum of numbers: " + countNumber);
+      Console.WriteLine("Total sum of numbers: " + sumNumbers);
     }
   }
 }
