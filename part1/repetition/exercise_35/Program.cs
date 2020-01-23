@@ -10,8 +10,7 @@ namespace exercise_35
       while (true) 
       {
         Console.WriteLine("Give a number:");
-        string userInput = Console.ReadLine();
-        int userNumber = Convert.ToInt32(userInput);
+        int userNumber = Convert.ToInt32(Console.ReadLine());
         if (userNumber == 42)
         { 
           break;
