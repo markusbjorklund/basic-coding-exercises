@@ -24,7 +24,7 @@ namespace exercise_40
           countNumbers = countNumbers +1;
         }  
       }
-      Console.WriteLine("Total sum of numbers: " + sumNumbers);
+      Console.WriteLine("Total sum of the numbers: " + sumNumbers);
       Console.WriteLine("Total amount of numbers: " + countNumbers);
     }
   }
