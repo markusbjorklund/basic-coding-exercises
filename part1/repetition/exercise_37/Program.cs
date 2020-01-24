@@ -16,7 +16,7 @@ namespace exercise_37
         { 
           break;
         }
-        if (userNumber > 0)
+        else
         {
           countNumber = countNumber +1;
         }  
