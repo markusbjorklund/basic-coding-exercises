@@ -1561,8 +1561,8 @@ Expand the program to ask for a start and end indices once it has finished askin
 > -1 
 From where?
 > 1
-To where?
-> 2 
+Where to?
+> 9 
 2 
 8
 ```
@@ -1575,9 +1575,368 @@ To where?
 > -1 
 From where?
 > 0 
-To where?
-> 2 
-72 
-2 
+Where to?
+> 20  
+2
 8
+11 
+```
+
+#### Exercise_70
+
+The exercise template contains a base that reads numbers from the user and adds them to a list. Reading is stopped once the user enters the number -1.
+
+Continue developing the program so that it ends the greatest number in the list and prints its value after reading all the numbers. The programming should work in the following manner.
+
+```console
+> 72
+> 2
+> 8
+> 93
+> 11
+> -1
+The greatest number: 93
+```
+You can assume that user always gives atleast one viable number.
+
+You can use the source code below as an inspitation. It is used to find the smallest number.
+
+```cs
+// assume we have a list that contains integers
+
+int smallest = list[0];
+
+for(int i = 0; i < list.Count; i++) {
+    int number = list[i];
+    if (smallest > number) {
+        smallest = number;
+    }
+}
+
+Console.WriteLine("The smallest number: " + smallest);
+```
+
+#### Exercise_71
+
+The exercise template contains a base that reads numbers from the user and adds them to a list. Reading is stopped once the user enters the number -1.
+
+Expand the program that then asks the user for a number, and reports that number's index in the list. If the number is not found, the program should not print anything.
+
+```console
+> 72 
+> 2 
+> 8 
+> 8 
+> 11 
+> -1
+Search for? 
+> 2 
+2 is at index 1
+```
+
+```console
+> 72 
+> 2 
+> 8 
+> 8 
+> 11 
+> -1
+Search for? 
+> 8 
+8 is at index 2
+8 is at index 3
+```
+
+#### Exercise_72
+
+Write a program that reads numbers from the user. When number 9999 is entered, the reading process stops. After this the program will print the smallest number in the list, and also the indices where that number is found. Notice: the smallest number can appear multiple times in the list.
+
+```console
+> 72
+> 2
+> 8
+> 8
+> 11
+> 9999
+Smallest number: 2 
+Found at index: 1
+```
+
+```console
+> 72
+> 44
+> 8
+> 8
+> 11
+> 9999
+Smallest number: 8 
+Found at index: 2 
+Found at index: 3
+```
+
+HINT: combine the programs you wrote for the exercises "Greatest number in the list" and "Index of the requested number". First find the smalleest number, and then find the index of that number.
+
+#### Exercise_73
+
+The exercise template contains a base that reads numbers from the user and adds them to a list. Reading is stopped once the user enters the number -1.
+
+Modify the program so that after reading the numbers it calculates and prints the sum of the numbers in the list.
+
+```console
+> 72
+> 2
+> 8
+> 11
+> -1
+Sum: 93
+```
+
+#### Exercise_74
+
+In the exercise template there is a program that reads inputs from the user until an empty string is entered. Add the following functionality to it: after reading the inputs one more string is requested from the user. The program then tell whether that string was found in the list or not.
+
+```
+> Tom
+> Emma
+> Alex
+> Mary
+Search for?
+> Mary
+Mary was found!
+```
+
+```
+> Tom
+> Emma
+> Alex
+> Mary
+Search for?
+> Logan
+Logan was not found!
+```
+
+#### Exercise_75
+
+Create the method **public static void PrintNumbersInRange(List\<int\> numbers, int lowerLimit, int upperLimit)** in the exercise template. The method prints the numbers in the given list whose values are in the range [lowerLimit, upperLimit]. A few examples of using the method are supplied below.
+
+```cs
+List<int> numbers = new List<int>();
+numbers.Add(3);
+numbers.Add(2);
+numbers.Add(6);
+numbers.Add(-1);
+numbers.Add(5);
+numnbers.Add(1);
+
+Console.WriteLine("The numbers in the range [0, 5]");
+PrintNumbersInRange(numbers, 0, 5);
+
+Console.WriteLine("The numbers in the range [3, 10]");
+PrintNumbersInRange(numbers, 3, 10);
+```
+
+```console
+The numbers in the range [0, 5] 
+3 
+2 
+5 
+1 
+The numbers in the range [3, 10] 
+3 
+6 
+5
+```
+
+#### Exercise_76
+
+
+Create the method **public static int Sum(List\<int\> numbers)** in the exercise template. The method is to **return** the sum of the numbers in the parameter list.
+
+```cs
+List<int> numbers = new List<int>();
+numbers.Add(3);
+numbers.Add(2);
+numbers.Add(6);
+numbers.Add(-1);
+Console.WriteLine(Sum(numbers));
+
+numbers.Add(5);
+numbers.Add(1);
+Console.WriteLine(Sum(numbers));
+```
+
+```console
+10
+16
+```
+
+### Exercise_77
+
+Create the method **public static void RemoveLast(List\<string\> strings)** in the exercise template. The method should remove the last value in the list it receives as a parameter. If the list is empty, the method does nothing.
+
+```cs
+List<string> strings = new List<string>();
+
+strings.Add("First");
+strings.Add("Second");
+strings.Add("Third");
+
+// Remember, this is how you print all the items in a list
+strings.ForEach(Console.WriteLine);
+
+RemoveLast(strings);
+RemoveLast(strings);
+
+strings.ForEach(Console.WriteLine);
+```
+
+## Arrays
+
+#### Exercise_78
+
+The exercise template already contains a program, that creates an array and prints the values of the array twice. Modify the program to do following: After the first printing, the program should ask for two indices from the user. The values in these two indices should be swapped, and in the end the values of the array should be printed once again.
+
+```console
+1 
+3 
+5 
+7 
+9
+
+Give two indices to swap: 
+> 2 
+> 4
+
+1 
+3 
+9 
+7 
+5
+```
+
+```console
+1 
+3 
+5 
+7 
+9
+
+Give two indices to swap: 
+> 0 
+> 1
+
+3 
+1 
+5 
+7 
+9
+```
+
+You can assume the array to contain the given indices.   
+
+Tip! You'll need an additional variable to store one of the values for little while.
+
+#### Exercise_79
+
+The exercise template has already an array containing numbers. Complete the program to ask the user for a number to search in the array. If the array contains the given number, the program tells the index containing the number. If the array doesn't contain the given number, the program will tell the number wasn't found.
+
+```console
+Search for? 
+> 3 
+3 is at index 4.
+```
+
+```console
+Search for? 
+> 7 
+7 is at index 7.
+```
+
+```console
+Search for? 
+> 22 
+22 was not found.
+```
+
+#### Exercise_80
+
+The template has a method **public static int SumOfNumbersInArray(int[] array)**. Complete the method so, that it computes and returns the sum of the numbers in the array it receives as parameter.
+
+You can try out the computation of the sum with this example:
+
+```cs
+int[] numbers = {5, 1, 3, 4, 2};
+int sum = SumOfNumbersInArray(numbers);
+Console.WriteLine(sum);
+```
+
+```console
+15
+```
+
+#### Exercise_81
+
+Complete the method **public static void PrintNeatly(int[] array)** in the template to make it print the numbers of the array it receives more neatly. There should be a whitespace and a comma between each number. don't put a comma after the last number.
+
+Print the numbers on one line using **Console.Write**.
+
+You can try out your printing with this example:
+
+```cs
+int[] array = {5, 1, 3, 4, 2};
+PrintNeatly(array);
+```
+
+```console
+5, 1, 3, 4, 2
+```
+
+#### Exercise_82
+
+Complete the method **public static void PrintArrayInStars(int[] array)** in the template to make it print a row of stars for each number in the array. The amount of stars on each row is defined by the corresponding number in the array.
+
+You can try out the printing with this example:
+
+```cs
+int[] array = {5, 1, 3, 4, 2};
+PrintArrayInStars(array);
+```
+
+```
+***** 
+* 
+*** 
+**** 
+**
+```
+
+The 0th element of the array is 5, so the first line has 5 stars. The next one has 1 etc.
+
+## Strings
+
+#### Exercise_83
+
+Write a program, that reads a string from the user and then prints it three times.
+
+```console
+Give a word: cake
+
+cakecakecake
+```
+
+NOTICE! The program should ask for only one string. Don't use a loop here.
+
+#### Exercise_84
+
+Write a program that asks the user for a string. If the user writes the string "true", the program prints "You got it right!", otherwise it prints "Try again!".
+
+```console
+Give a string: true 
+You got it right!
+```
+
+
+```console
+Give a string: trueish 
+Try again!
 ```
