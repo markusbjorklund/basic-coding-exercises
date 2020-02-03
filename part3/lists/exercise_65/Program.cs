@@ -16,8 +16,8 @@ namespace exercise_65
           break;
         }
         list.Add(input);
-      }
-
+      }      
+      Console.WriteLine("In total: " + list.Count);
     }
   }
 }
