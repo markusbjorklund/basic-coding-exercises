@@ -7,28 +7,24 @@ namespace sandbox
     {
         static void Main(string[] args)
         {
-
-List<int> numbers = new List<int>();
-
-numbers.Add(1);
-numbers.Add(2);
-numbers.Add(3);
-numbers.Add(4);
-
-for (int i - 1; i <= numbers.Count; i--)
-    {
-        int number = numbers[i];
-        Console.WriteLine(number);
-    }
-
-//int index = numbers.Count - 1;
-//while (index >= 0)
-//{
-//  int number = numbers[index];
-//  Console.WriteLine(number);
-//  index = index - 1;
-//}
-        
+        List<int> list = new List<int>();
+        list.Add(1);
+        list.Add(2);
+        list.Add(3);
+        list.Add(2);
+        list.Add(1);
+        PrintSmallerThan(list, 3);
         }
+        public static void PrintSmallerThan(List<int> numbers, int threshold) 
+{
+  foreach(int number in numbers)
+  {
+    if (number < threshold) 
+    {
+      Console.WriteLine(number);
+    }
+  }
+}
+
     }
 }
