@@ -17,24 +17,25 @@ namespace exercise_69
         }
         list.Add(input);
         }
+
         Console.WriteLine("From where?");
         int start = Convert.ToInt32(Console.ReadLine());
-        
-        Console.WriteLine(start);
-
         Console.WriteLine("Where to?");
         int end = Convert.ToInt32(Console.ReadLine());
 
-        Console.WriteLine(end);
+        PrintThisRange(list, start, end);
+        }
 
-        // if (list.Contains(start))
-        // {
-        //   Console.WriteLine("This is the number " + start);
-        //   list.ForEach(Console.WriteLine);
-        // }
-
-
-
+    public static void PrintThisRange(List<int> numbers, int start, int end) 
+    {
+      foreach(int number in numbers)
+    { 
+      if (number >= start)
+      if (number <= end) 
+      {
+        Console.WriteLine(number);
+      }
     }
+  }
   }
 }
