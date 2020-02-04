@@ -17,7 +17,6 @@ namespace exercise_69
         }
         list.Add(input);
         }
-
         Console.WriteLine("From where?");
         int start = Convert.ToInt32(Console.ReadLine());
         Console.WriteLine("Where to?");
@@ -26,16 +25,16 @@ namespace exercise_69
         PrintThisRange(list, start, end);
         }
 
-    public static void PrintThisRange(List<int> numbers, int start, int end) 
-    {
-      foreach(int number in numbers)
-    { 
-      if (number >= start)
-      if (number <= end) 
+      public static void PrintThisRange(List<int> numbers, int start, int end) 
       {
-        Console.WriteLine(number);
+        foreach(int number in numbers)
+      { 
+        if (number >= start)
+        if (number <= end) 
+        {
+          Console.WriteLine(number);
+        }
       }
     }
-  }
   }
 }
