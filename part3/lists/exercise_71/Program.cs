@@ -20,7 +20,6 @@ namespace exercise_71
 
       Console.WriteLine("Search for? ");
       int search = Convert.ToInt32(Console.ReadLine());
-      // Console.WriteLine(number + " is at index " + index);
 
       PrintIndexOf(list, search);
     }
@@ -31,15 +30,11 @@ namespace exercise_71
       { 
       if (number == search)
       {
-        Console.WriteLine(number + " is at index ");
-      }
-      }
-      // int index = list.IndexOf(number);
 
-      // int index = numbers.IndexOf(search);
-      // Console.WriteLine(index);
-
-      
+        //FAIL!
+        Console.WriteLine(number + " is at index " + numbers.IndexOf(search));
+      }
+      }      
     }
   }
 }
