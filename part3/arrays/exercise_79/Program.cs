@@ -22,10 +22,7 @@ namespace exercise_79
       int searching = Convert.ToInt32(Console.ReadLine());
 
       // Implement the search functionality here
-
     }
 
   }
 }
-
-
