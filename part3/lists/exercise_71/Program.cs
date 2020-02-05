@@ -18,27 +18,19 @@ namespace exercise_71
         list.Add(input);
       }
 
-      Console.WriteLine("Search for? ");
-      int search = Convert.ToInt32(Console.ReadLine());
+      Console.WriteLine("Search for?");
+      int userInput = Convert.ToInt32(Console.ReadLine()); 
 
-      PrintIndexOf(list, search);
-    }
-
-    public static void PrintIndexOf(List<int> numbers, int search) 
-    {
-      int index = numbers.IndexOf(search);
-      foreach(int number in numbers)
-      { 
-      if (number == search)
-      
-      
+      if (list.Contains(userInput)) 
       {
-        //FAIL
-        Console.WriteLine(number + " is at index " + numbers.IndexOf(number));
-
-        // Console.WriteLine(index);
-      }
-      }      
+        for (int i = 0; i < list.Count; i++) 
+        { 
+          if (list[i] == userInput) 
+          {
+            Console.WriteLine(userInput + " is at index " + i);
+          }  
+        }
+      }     
     }
   }
 }
