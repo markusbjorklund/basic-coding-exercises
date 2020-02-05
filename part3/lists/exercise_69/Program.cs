@@ -22,13 +22,8 @@ namespace exercise_69
         Console.WriteLine("Where to?");
         int end = Convert.ToInt32(Console.ReadLine());
 
-        PrintThisRange(list, start, end);
-        }
-
-      public static void PrintThisRange(List<int> numbers, int start, int end) 
-      {
-        foreach(int number in numbers)
-      { 
+        foreach(int number in list)
+        { 
         if (   (number >= start) && (number <= end)   )
         {
           Console.WriteLine(number);
