@@ -17,8 +17,6 @@ namespace exercise_77 {
       RemoveLast (strings);
 
       strings.ForEach (Console.WriteLine);
-
-      // You can try your method here if you want
     }
 
     // method
