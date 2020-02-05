@@ -48,5 +48,3 @@ namespace exercise_78
 
   }
 }
-
-
