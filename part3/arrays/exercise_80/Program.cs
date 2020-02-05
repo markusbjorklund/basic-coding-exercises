@@ -13,12 +13,19 @@ namespace exercise_80
 
     }
 
-    public static int SumOfNumbersInArray(int[] numbers) {
-
-      return 0;
+    public static int SumOfNumbersInArray(int[] numbers)
+    {
+      // start from scratch
+      int sum = 0;
+      // einstein-code
+      for (int i = 0; i < numbers.Length; i++)
+      {
+        // do some math
+        int number = numbers[i];
+        sum = sum + number;
+      }
+      return (sum);
     }
 
   }
 }
-
-
