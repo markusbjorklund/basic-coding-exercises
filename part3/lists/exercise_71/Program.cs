@@ -20,17 +20,13 @@ namespace exercise_71
 
       Console.WriteLine("Search for?");
       int userInput = Convert.ToInt32(Console.ReadLine()); 
-
-      if (list.Contains(userInput)) 
-      {
         for (int i = 0; i < list.Count; i++) 
         { 
           if (list[i] == userInput) 
-          {
-            Console.WriteLine(userInput + " is at index " + i);
-          }  
-        }
-      }     
+        {
+          Console.WriteLine(userInput + " is at index " + i);
+        }  
+      }
     }
   }
 }
