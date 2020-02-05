@@ -29,8 +29,7 @@ namespace exercise_69
       {
         foreach(int number in numbers)
       { 
-        if (number >= start)
-        if (number <= end) 
+        if (   (number >= start) && (number <= end)   )
         {
           Console.WriteLine(number);
         }

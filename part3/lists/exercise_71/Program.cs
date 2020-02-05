@@ -26,13 +26,17 @@ namespace exercise_71
 
     public static void PrintIndexOf(List<int> numbers, int search) 
     {
+      int index = numbers.IndexOf(search);
       foreach(int number in numbers)
       { 
       if (number == search)
+      
+      
       {
+        //FAIL
+        Console.WriteLine(number + " is at index " + numbers.IndexOf(number));
 
-        //FAIL!
-        Console.WriteLine(number + " is at index " + numbers.IndexOf(search));
+        // Console.WriteLine(index);
       }
       }      
     }
