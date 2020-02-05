@@ -27,7 +27,10 @@ namespace exercise_75 {
     // method
     public static void PrintNumbersInRange (List<int> numbers, int lowerLimit, int upperLimit) // Method for a list with limits.
     {
-      foreach (int number in numbers) {
+      
+      // einsteining the numbers
+      for (int i = 0; i < numbers.Count; i++) {
+        int number = numbers[i];
 
         // check the numbers
         if (lowerLimit <= number && upperLimit >= number) {
