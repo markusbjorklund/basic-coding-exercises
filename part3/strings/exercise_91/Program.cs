@@ -8,14 +8,16 @@ namespace exercise_91
     public static void Main(string[] args)
     {
       List<string> persons = new List<string>();
-      //int oldest
+
+      // int oldest
       int oldest = 0;
+      // we don't know the name yet
       string name = "";
       // read from user
       while (true)
       {
         string asked = Console.ReadLine();
-        //break if empty
+        // break if empty
         if (asked == "")
         {
           break;
