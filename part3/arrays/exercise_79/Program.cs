@@ -23,8 +23,8 @@ namespace exercise_79
 
       // Implement the search functionality here
 
-      // syntax error
-      int error = 1;
+      // truth value
+      bool found = false;
 
       // show me the numbers
       for (int i = 0; i < array.Length; i++)
@@ -35,10 +35,10 @@ namespace exercise_79
           // number is found in array
           Console.WriteLine(searching + " is at index " + i + ".");
           // everyting is ok
-          error = 0;
+          found = true;
         }
       // number not in array
-      if (error == 1)
+      if (!found)
       {
         Console.WriteLine(searching + " was not found.");
       }
