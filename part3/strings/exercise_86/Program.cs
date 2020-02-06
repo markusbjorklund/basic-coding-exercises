@@ -16,8 +16,8 @@ namespace exercise_86
         {
           break;
         }
-        // string "asked" and split from white space
-        // create array called "parts"
+        // split at white space
+        // create array
         string[] parts = asked.Split(" ");
         foreach (string line in parts)
         {
