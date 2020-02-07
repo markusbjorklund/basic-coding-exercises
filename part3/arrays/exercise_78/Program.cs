@@ -30,11 +30,11 @@ namespace exercise_78
       int second = Convert.ToInt32(Console.ReadLine());
 
       // save first 
-      int lockFirst = array[first];
+      int swap = array[first];
       // swap first with second
       array[first] = array[second];
       // bring back first
-      array[second] = lockFirst;
+      array[second] = swap;
 
       // DO NOT CHANGE THE FOLLOWING CODE!
       Console.WriteLine("");
