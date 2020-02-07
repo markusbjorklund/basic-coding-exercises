@@ -7,8 +7,6 @@ namespace exercise_92
   {
     public static void Main(string[] args)
     {
-      List<string> persons = new List<string>();
-
       // int age 
       int age = 0;
       int oldest = 0;
@@ -41,6 +39,7 @@ namespace exercise_92
         if (oldest < age) { oldest = age; }
       }
       // print longest name
+
       Console.WriteLine("Longest name: " + longestName);
       // print oldest
       Console.WriteLine("Highest age: " + oldest);

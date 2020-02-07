@@ -7,7 +7,6 @@ namespace exercise_90
   {
     public static void Main(string[] args)
     {
-      List<string> persons = new List<string>();
       //int oldest
       int oldest = 0;
       // read from user
@@ -33,11 +32,6 @@ namespace exercise_90
       }
       // print the oldest
       Console.WriteLine("Age of the oldest: " + oldest);
-
-      foreach (string person in persons)
-      {
-        Console.WriteLine(person);
-      }
     }
   }
 }
