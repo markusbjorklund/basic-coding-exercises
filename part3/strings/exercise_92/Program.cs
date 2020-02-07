@@ -7,42 +7,36 @@ namespace exercise_92
   {
     public static void Main(string[] args)
     {
-      // int age 
-      int age = 0;
-      int oldest = 0;
-      // namegoodies
-      string name = "";
-      string longestName = "";
-      int length = 0;
-      int longest = 0;
-      // read from user
+      // age
+      int age = 9999;
+      // name
+      string name = ("");
       while (true)
       {
-        string asked = Console.ReadLine();
-        // break if empty
-        if (asked == "")
+        string input = Console.ReadLine();
+        if (input == "")
         {
           break;
         }
+        // split the string in parts[0] (name) and [1] (year of birth)
+        string[] parts = input.Split(",");
 
-        // split strings into parts[0] and parts[1]
-        // split strings into name and birthdate
-        string[] parts = asked.Split(",");
-        // grab stuff for name
-        name = parts[0];
-        length = name.Length;
-        // subtract birthdate from current year
-        age = 2020 - Convert.ToInt32(parts[1]);
-        // get longest name (had trouble with the order on these)
-        if (longest < length) { longest = length; longestName = name; }
-        // get age of oldest bastard
-        if (oldest < age) { oldest = age; }
+        // get birthyear of oldest (doing it the Janne-way)
+        if (age > Convert.ToInt32(parts[1]))
+        {
+          age = Convert.ToInt32(parts[1]);
+        }
+
+        // get longest name
+        if (name.Length < parts[0].Length)
+        {
+          name = parts[0];
+        }
       }
-      // print longest name
-
-      Console.WriteLine("Longest name: " + longestName);
-      // print oldest
-      Console.WriteLine("Highest age: " + oldest);
+    // calculate age of oldest
+    int oldest = 2020 - age;
+    Console.WriteLine("Longest name: " + name);
+    Console.WriteLine("Highest age: " + oldest);
     }
   }
 }
