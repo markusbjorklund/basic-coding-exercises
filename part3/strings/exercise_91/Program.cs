@@ -7,8 +7,6 @@ namespace exercise_91
   {
     public static void Main(string[] args)
     {
-      List<string> persons = new List<string>();
-
       // int oldest
       int oldest = 0;
       // we don't know the name yet
@@ -38,11 +36,6 @@ namespace exercise_91
       }
       // print the name
       Console.WriteLine("Name of the oldest: " + name);
-
-      foreach (string person in persons)
-      {
-        Console.WriteLine(person);
-      }
     }
   }
 }
