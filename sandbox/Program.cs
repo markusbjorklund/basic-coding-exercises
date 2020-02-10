@@ -3,28 +3,25 @@ using System.Collections.Generic;
 
 namespace sandbox
 {
-    class Program
-    {
-        static void Main(string[] args)
-        {
-        List<int> list = new List<int>();
-        list.Add(1);
-        list.Add(2);
-        list.Add(3);
-        list.Add(2);
-        list.Add(1);
-        PrintSmallerThan(list, 3);
-        }
-        public static void PrintSmallerThan(List<int> numbers, int threshold) 
-{
-  foreach(int number in numbers)
+  class Program
   {
-    if (number < threshold) 
+    static void Main(string[] args)
     {
-      Console.WriteLine(number);
-    }
-  }
-}
+      // testarea
+
+      Person matti = new Person("Matti");
+      Person juhana = new Person("Juhana");
+
+      matti.height = 180;
+      matti.weight = 86;
+
+      juhana.height = 175;
+      juhana.weight = 64;
+
+      Console.WriteLine(matti.name + ", body mass index is " + matti.BodyMassIndex());
+      Console.WriteLine(juhana.name + ", body mass index is " + juhana.BodyMassIndex());
 
     }
+    // testarea
+  }
 }
