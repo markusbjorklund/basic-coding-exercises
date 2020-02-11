@@ -19,7 +19,7 @@ namespace exercise_100
         }
         public void WaitOneYear()
         {
-            // show me less money
+            // more money for the bank
             this.balance = this.balance * this.interestRate;
         }
     }
