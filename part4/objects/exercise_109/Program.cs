@@ -20,7 +20,3 @@ namespace exercise_109
     }
   }
 }
-
-
-
-

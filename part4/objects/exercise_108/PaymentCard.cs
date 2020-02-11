@@ -14,22 +14,20 @@ namespace exercise_108
         public void EatLunch()
         {
             double lunch = 10.60;
-            this.balance = this.balance - lunch;
+            if (this.balance > lunch)
+            {
+                this.balance = this.balance - lunch;
+            }
         }
 
         // engage insomnia
         public void DrinkCoffee()
         {
             double coffe = 2.0;
-            this.balance = this.balance - coffe;
-        }
-
-        // money, money, give me money
-        public void AddMoney(double amount)
-        {
-            // write code here
-            this.balance = this.balance + amount;
-
+            if (this.balance > coffe)
+            {
+                this.balance = this.balance - coffe;
+            }
         }
 
         public override string ToString()
