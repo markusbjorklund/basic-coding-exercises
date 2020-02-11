@@ -1,4 +1,4 @@
-namespace exercise_107
+namespace exercise_108
 {
     public class PaymentCard
     {
@@ -22,6 +22,14 @@ namespace exercise_107
         {
             double coffe = 2.0;
             this.balance = this.balance - coffe;
+        }
+
+        // money, money, give me money
+        public void AddMoney(double amount)
+        {
+            // write code here
+            this.balance = this.balance + amount;
+
         }
 
         public override string ToString()
