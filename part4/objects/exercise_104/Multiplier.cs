@@ -13,8 +13,7 @@ namespace exercise_104
 
         public int Multiply(int value)
         {
-            this.value = this.value * value;
-            return this.value;
+            return this.value = this.value * value;
         }
     }
 }
