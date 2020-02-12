@@ -7,7 +7,7 @@ namespace exercise_109
         public PaymentCard(double openingBalance)
         {
             // write code here
-            this.balance = openingBalance - this.balance;
+            this.balance = openingBalance;
         }
 
         // namnamnnamnam
@@ -33,7 +33,7 @@ namespace exercise_109
         // money, money, give me money
         public void AddMoney(double amount)
         {
-            // write code here
+            //write code here
             if (amount > 0)
             {
                 this.balance = this.balance + amount;
