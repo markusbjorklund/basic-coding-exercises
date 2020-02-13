@@ -36,7 +36,7 @@ namespace exercise_113
             // what do you want to see?
             Console.Write("What information will be printed? ");
             string input = Console.ReadLine();
-            if (input == "name")
+            if (input == "title")
             {
                 foreach (Book item in books)
                 {

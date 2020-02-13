@@ -6,7 +6,17 @@ namespace exercise_114
     {
         public static void Main(string[] args)
         {
+            
+            while (true)
+            {
+                string line = Console.ReadLine();
 
+                if (line == "end")
+                {
+                    break;
+                }
+            }
+            Console.WriteLine(line.Count());
         }
     }
 }
