@@ -36,6 +36,8 @@ namespace exercise_79
           Console.WriteLine(searching + " is at index " + i + ".");
           // everyting is ok
           found = true;
+          // break is needed to not repeat found value
+          break;
         }
       // number not in array
       if (!found)
