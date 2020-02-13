@@ -36,21 +36,23 @@ namespace exercise_113
             // what do you want to see?
             Console.Write("What information will be printed? ");
             string input = Console.ReadLine();
-            if (input == "title")
+            // list the books, redid this part of the exercise
+            // first attempt had too much code
+            foreach (Book item in books)
             {
-                foreach (Book item in books)
+                if (input == "title")
                 {
                     // just print the title
                     Console.WriteLine(item.title);
                 }
-            }
-
-            else if (input == "everything")
-            {
-                foreach (Book item in books)
+                else if (input == "everything")
                 {
                     // print everything
                     Console.WriteLine(item);
+                }
+                else 
+                {
+                  break;
                 }
             }
         }
