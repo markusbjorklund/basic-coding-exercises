@@ -12,16 +12,15 @@ namespace exercise_114
             while (true)
             {
                 string line = Console.ReadLine();
-                // count lines
-                counter++;
 
                 if (line == "end")
                 {
                     break;
                 }
+                counter++;
             }
             // print number of lines
-            Console.WriteLine(counter -1);
+            Console.WriteLine(counter);
         }
     }
 }
