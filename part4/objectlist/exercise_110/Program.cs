@@ -10,7 +10,7 @@ namespace exercise_110
             // IMPLEMENT YOUR CODE IN HERE!
             // note to self, it's called Item.cs
             // worked with list named list but failed testing
-            // list must be called itmes
+            // list must be called items
             List<Item> items = new List<Item>();
             while (true)
             {
