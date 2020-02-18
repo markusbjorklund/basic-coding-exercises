@@ -33,7 +33,7 @@ namespace exercise_128
     public int PriceDifference(Apartment compared)
     {
       // Math.Abs returns the absolute value
-      return Math.Abs( (compared.squares * compared.pricePerSquare) - (this.squares * this.pricePerSquare) );
+      return Math.Abs((compared.squares * compared.pricePerSquare) - (this.squares * this.pricePerSquare));
     }
 
     public bool MoreExpensiveThan(Apartment compared)
@@ -45,5 +45,4 @@ namespace exercise_128
       return false;
     }
   }
-
 }
