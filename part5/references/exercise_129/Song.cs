@@ -24,15 +24,30 @@ namespace exercise_129
     public override bool Equals(object compared)
     {
 
-  // this one needs a bit more work
-      if (this)
+      // are the songs equal
+      if (this == compared)
       {
         return true;
       }
+
+      // if not equal return false
+      if ((compared == null) || !this.GetType().Equals(compared.GetType()))
+      {
+        return false;
+      }
+
+      Song comparedSong = (Song)compared;
+
+      // if the values of the object variables are the same, the objects are equal
+      if (this.artist == comparedSong.artist &&
+          this.name == comparedSong.name &&
+          this.durationInSeconds == comparedSong.durationInSeconds)
+      {
+        return true;
+      }
+      // otherwise the objects are not equal
       return false;
     }
     // END SOLUTION
-
   }
-
 }
