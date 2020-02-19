@@ -23,7 +23,12 @@ namespace exercise_129
     // BEGIN SOLUTION
     public override bool Equals(object compared)
     {
- 
+
+  // this one needs a bit more work
+      if (this)
+      {
+        return true;
+      }
       return false;
     }
     // END SOLUTION
