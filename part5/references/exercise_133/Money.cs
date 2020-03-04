@@ -16,12 +16,10 @@ namespace exercise_133
       this.euros = euros;
       this.cents = cents;
     }
-
     public Money Plus(Money addition)
     {
       Money newMoney = new Money(this.euros, this.cents);
       // create a new Money object that has the correct worth
-      // return the new Money object
       newMoney.euros += addition.euros;
       newMoney.cents += addition.cents;
 
