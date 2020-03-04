@@ -13,7 +13,6 @@ namespace exercise_133
         euros = euros + cents / 100;
         cents = cents % 100;
       }
-
       this.euros = euros;
       this.cents = cents;
     }
@@ -26,10 +25,10 @@ namespace exercise_133
       newMoney.euros += addition.euros;
       newMoney.cents += addition.cents;
 
-      if (newMoney.cents > 99)
+      if (newMoney.cents > 100)
       {
-        newMoney.euros = newMoney.euros + newMoney.cents / 100;
-        newMoney.cents = newMoney.cents % 100;
+        newMoney.cents = newMoney.cents - 100;
+        newMoney.euros++;
       }
       return newMoney;
     }
@@ -38,20 +37,19 @@ namespace exercise_133
     {
       Money newMoney = new Money(this.euros, this.cents);
       // create a new Money object that has the correct worth
+
       newMoney.euros -= decreaser.euros;
       newMoney.cents -= decreaser.cents;
-
       if (newMoney.cents < 0)
       {
+        newMoney.cents = 100 + newMoney.cents;
         newMoney.euros = newMoney.euros - 1;
-        newMoney.cents = newMoney.cents + 100;
       }
-      else if (newMoney.euros < 0 || newMoney.cents < 0)
+      if (newMoney.euros < 0)
       {
         newMoney.euros = 0;
         newMoney.cents = 0;
       }
-      // return the new Money object
       return newMoney;
     }
 
@@ -62,14 +60,11 @@ namespace exercise_133
       {
         return true;
       }
-      else if (this.euros == compared.euros && compared.cents > this.cents)
+      else if (this.cents < compared.cents)
       {
         return true;
       }
-      else
-      {
-        return false;
-      }
+      return false;
     }
     public override string ToString()
     {
