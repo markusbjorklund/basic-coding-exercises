@@ -68,7 +68,7 @@ public class GradeRegister
       return Math.Round(-1.0, 2);
     }
     // calculate the average of grades
-    double averageGrade = 0.00;
+    double averageGrade = 0;
     foreach (double grade in this.grades)
     {
       averageGrade = averageGrade + grade;
