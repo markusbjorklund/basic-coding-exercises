@@ -31,8 +31,9 @@ namespace exercise_135
         if (command == "1")
         {
           Console.WriteLine("Write the joke to be added:");
-          string joke = Console.ReadLine();
-          manager.AddJoke(joke);
+          // string joke = Console.ReadLine();
+          // manager.AddJoke(joke);
+          manager.AddJoke(Console.ReadLine());
         }
         else if (command == "2")
         {
