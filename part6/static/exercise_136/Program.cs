@@ -19,7 +19,7 @@ namespace exercise_136
     // Do something here
     public static void HowManyNames(Person person)
     {
-      // Split the name (treated as an object) on space, print how many names (objects)
+      // Split the name on space, print how many names 
       Console.WriteLine(person + " has " + person.ToString().Split(" ").Length + " names.");
     }
   }
