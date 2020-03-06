@@ -7,10 +7,11 @@ namespace exercise_83
   {
     public static void Main(string[] args)
     {
-
-
+      // ask user for candy
+      Console.Write("Give a word: ");
+      string candy = Console.ReadLine();
+      // print user candy times three
+      Console.WriteLine(candy + candy + candy);
     }
-
   }
 }
-
