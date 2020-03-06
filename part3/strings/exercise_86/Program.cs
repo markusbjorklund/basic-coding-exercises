@@ -7,9 +7,24 @@ namespace exercise_86
   {
     public static void Main(string[] args)
     {
+      // read from user
+      while (true)
+      {
+        string asked = Console.ReadLine();
+        //break if empty
+        if (asked == "")
+        {
+          break;
+        }
+        // split at white space
+        // create array
+        string[] parts = asked.Split(" ");
+        foreach (string line in parts)
+        {
+          Console.WriteLine(line);
+        }
 
-
+      }
     }
   }
 }
-

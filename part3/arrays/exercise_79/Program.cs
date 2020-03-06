@@ -23,9 +23,27 @@ namespace exercise_79
 
       // Implement the search functionality here
 
-    }
+      // truth value
+      bool found = false;
 
+      // show me the numbers
+      for (int i = 0; i < array.Length; i++)
+
+        // is number in array?
+        if (searching == array[i])
+        {
+          // number is found in array
+          Console.WriteLine(searching + " is at index " + i + ".");
+          // everyting is ok
+          found = true;
+          // break is needed to not repeat found value
+          break;
+        }
+      // number not in array
+      if (!found)
+      {
+        Console.WriteLine(searching + " was not found.");
+      }
+    }
   }
 }
-
-

@@ -8,7 +8,8 @@ namespace exercise_41
     {
 
       // Write your code here:
-      
+      int userInput = Convert.ToInt32(Console.ReadLine());
+      Console.WriteLine(userInput * userInput);
     }
   }
 }

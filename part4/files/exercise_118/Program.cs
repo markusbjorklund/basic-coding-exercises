@@ -3,44 +3,43 @@ using System.IO;
 
 namespace exercise_118
 {
-  class Program
-  {
-    public static void Main(string[] args)
+    class Program
     {
-      // Ask the user for the file name and print the content of the file
-      Console.WriteLine("Name of the file:");
-      string file = Console.ReadLine();
-
-      // DO NOT TOUCH THE CODE ABOVE!
-      // implement reading the file here;
-      
-
-
-
-      // DO NOT TOUCH THE CODE BELOW!
-      Console.WriteLine("");
-
-      Console.WriteLine("Enter names, an empty line quits.");
-      while (true)
-      {
-        string name = Console.ReadLine();
-        if (name == "")
+        public static void Main(string[] args)
         {
-          break;
-        }
+            // Ask the user for the file name and print the content of the file
+            Console.WriteLine("Name of the file:");
+            string file = Console.ReadLine();
 
-        if (names.Contains(name))
-        {
-          Console.WriteLine("The name is on the list.");
-        }
-        else
-        {
-          Console.WriteLine("The name is not on the list.");
-        }
-      }
+            // DO NOT TOUCH THE CODE ABOVE!
+            // implement reading the file here;
 
-      Console.WriteLine("Thank you!");
+            string names = File.ReadAllText(file);
 
+            // DO NOT TOUCH THE CODE BELOW!
+            Console.WriteLine("");
+
+            Console.WriteLine("Enter names, an empty line quits.");
+            while (true)
+            {
+                string name = Console.ReadLine();
+                if (name == "")
+                {
+                    break;
+                }
+
+                if (names.Contains(name))
+                {
+                    Console.WriteLine("The name is on the list.");
+                }
+                else
+                {
+                    Console.WriteLine("The name is not on the list.");
+                }
+            }
+
+            Console.WriteLine("Thank you!");
+
+        }
     }
-  }
 }

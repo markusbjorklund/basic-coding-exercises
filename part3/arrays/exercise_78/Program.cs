@@ -25,8 +25,16 @@ namespace exercise_78
 
       // Implement here
       // asking for the two indices
-      // and then swapping them
+      Console.WriteLine("Give two indices to swap:");
+      int first = Convert.ToInt32(Console.ReadLine());
+      int second = Convert.ToInt32(Console.ReadLine());
 
+      // save first 
+      int swap = array[first];
+      // swap first with second
+      array[first] = array[second];
+      // bring back first
+      array[second] = swap;
 
       // DO NOT CHANGE THE FOLLOWING CODE!
       Console.WriteLine("");
@@ -40,5 +48,3 @@ namespace exercise_78
 
   }
 }
-
-
