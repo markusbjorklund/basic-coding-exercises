@@ -19,7 +19,7 @@ namespace extra_03
       int userNumbers = 0;
       double average = 0;
 
-      // ask user how many numbers and to give numbers
+      // ask user how many numbers
       Console.WriteLine("How many numbers?");
       int numAmount = Convert.ToInt32(Console.ReadLine());
       Console.WriteLine("Give " + numAmount + " numbers:");
