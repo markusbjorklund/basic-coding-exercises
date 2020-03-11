@@ -14,7 +14,7 @@ namespace extra_01 {
       // a million of times says user  
       int numOfTimes = Convert.ToInt32(Console.ReadLine());
 
-      // print what method does to console
+      // print what the method does to console
       PrintThis(numOfTimes, userInput);
     }
 
