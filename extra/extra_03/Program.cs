@@ -49,7 +49,7 @@ namespace extra_03
       {
         sum = number + sum;
         total = number * total;
-        average = sum / (double)numAmount; // ew want decimals in our average (double)
+        average = sum / (double)numAmount; // we want decimals in our average (double)
       }
 
       // print number stats
