@@ -16,7 +16,7 @@ namespace extra_04
 
       // need to clean up this and make it somewhat shorter and less sucky
 
-      if (userInput < 0) 
+      if (userInput < 1) 
       {
         Console.WriteLine("Impossible");
       }
@@ -40,7 +40,7 @@ namespace extra_04
       {
         Console.WriteLine("Grade: 4");
       }
-      else if (userInput <= 100)
+      else if (userInput < 101)
       {
         Console.WriteLine("Grade: 5");
       }
