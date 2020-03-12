@@ -14,8 +14,6 @@ namespace extra_04
 
       // grading users input with ifs
 
-      // need to clean up this and make it somewhat shorter and less sucky
-
       if (userInput < 1) 
       {
         Console.WriteLine("Impossible");
