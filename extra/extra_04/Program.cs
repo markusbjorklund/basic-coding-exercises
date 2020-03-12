@@ -24,11 +24,23 @@ namespace extra_04
       {
         Console.WriteLine("Fail");
       }
-      else if (userInput <= 75)
+      else if (userInput < 60)
+      {
+        Console.WriteLine("Grade: 1");
+      }
+      else if (userInput < 70)
+      {
+        Console.WriteLine("Grade: 2");
+      }
+      else if (userInput < 80)
       {
         Console.WriteLine("Grade: 3");
       }
-      else if (userInput < 100)
+      else if (userInput < 90)
+      {
+        Console.WriteLine("Grade: 4");
+      }
+      else if (userInput <= 100)
       {
         Console.WriteLine("Grade: 5");
       }
