@@ -9,50 +9,32 @@ namespace extra_03
     {
       // Add your code here:
 
-      // prepping for the exam, so I am commmenting the hell out of these exercises so my brain can remember at least some of this stuff
-
-      // we can call this BIG BRAIN TIME
-
       // numbers we want answers on
       int sum = 0;
       int total = 1; // can't multiply with zero
-      int userNumbers = 0;
       double average = 0;
+
+      // set zero on run
+      int userNumbers = 0;
 
       // ask user how many numbers
       Console.WriteLine("How many numbers?");
       int numAmount = Convert.ToInt32(Console.ReadLine());
       Console.WriteLine("Give " + numAmount + " numbers:");
 
-      // make list for the numbers
-      List<int> numbers = new List<int>();
-
-      // add users numbers to the list
-
-      // for (int i = 0; i < numAmount; i++)
-      // {
-      //   userNumbers = Convert.ToInt32(Console.ReadLine());
-      //   numbers.Add(userNumbers);
-      // }
-
-      // doing it with a while loop is a bit clearer, but for loop looks more tidy
-      int i = 0;
-      while (i < numAmount)
+      // loop until given numbercount is reached
+      for (int i = 0; i < numAmount; i++)
       {
         userNumbers = Convert.ToInt32(Console.ReadLine());
-        numbers.Add(userNumbers);
-        i++;
+        // gather the sum of numbers
+        sum = userNumbers + sum;
+        // calculate totals
+        total = userNumbers * total;
+        // calculate average (does not have to be in the loop)
+        average = (double)sum / numAmount;
       }
 
-      // do some calculations (foreach goes through every item, in this case number (int, but can also be a string), in the list)
-      foreach (int number in numbers)
-      {
-        sum = number + sum;
-        total = number * total;
-        average = sum / (double)numAmount; // we want decimals in our average (double)
-      }
-
-      // print number stats
+      // do some printing
       Console.WriteLine("Their sum: " + sum);
       Console.WriteLine("Their total: " + total);
       Console.WriteLine("Their average: " + average);
