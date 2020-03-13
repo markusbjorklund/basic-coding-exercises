@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace extra_12
 {
@@ -8,6 +9,10 @@ namespace extra_12
     {
       // Add your code here:
 
+      Person mike = new Person("Mike");
+      Console.WriteLine(mike);
+      mike.GrowOlder(5);
+      Console.WriteLine(mike);
     }
   }
 }
