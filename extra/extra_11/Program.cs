@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace extra_11
 {
@@ -8,6 +9,16 @@ namespace extra_11
     {
       // Add your code here:
 
+      // ask user for sentence
+      Console.WriteLine("Hello there! Give me a sentence:");
+      string userSentence = Console.ReadLine();
+
+      // split, loop and print the string
+      string[] pieces = userSentence.Split(" ");
+      for ( int i = 0; i < pieces.Length; i++)
+      {
+        Console.WriteLine(pieces[i]);
+      }
     }
   }
 }
