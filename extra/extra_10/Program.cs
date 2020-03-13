@@ -13,7 +13,7 @@ namespace extra_10
       PrintArrayInStars(array);
     }
 
-    // define the method
+    // define the method 
     public static void PrintArrayInStars(int[] array)
     {
       // call and list the array
@@ -24,7 +24,7 @@ namespace extra_10
         {
           Console.Write("*");
         }
-        // insert linebreaks for each row
+        // linebreaks for each row
         Console.WriteLine();
       }
     }
