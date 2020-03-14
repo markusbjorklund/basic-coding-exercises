@@ -1,4 +1,5 @@
-﻿using System;
+﻿  
+using System;
 using System.Collections.Generic;
 
 namespace exercise_113
@@ -58,7 +59,3 @@ namespace exercise_113
     }
   }
 }
-
-
-
-
