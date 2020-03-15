@@ -4,7 +4,7 @@ namespace exercise_113
 {
   public class Book
   {
-    public string title { get; set; }
+    public string title { get; }
     public int pages { get; set; }
     public int year { get; set; }
 
