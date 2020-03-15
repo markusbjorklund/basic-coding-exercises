@@ -18,6 +18,5 @@ namespace exercise_113
     {
       return this.title + ", " + this.pages + " pages, " + this.year;
     }
-
   }
 }
