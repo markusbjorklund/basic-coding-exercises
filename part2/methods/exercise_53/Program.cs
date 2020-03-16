@@ -7,7 +7,7 @@ namespace exercise_53
     public static void Main(String[] args)
     {
       // Call your method here:
-      Division(10, 6);
+      Division(116,23);
     }
 
     // Write your method here:
