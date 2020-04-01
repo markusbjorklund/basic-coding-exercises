@@ -21,16 +21,36 @@ namespace Exercise
 
     public static void PrintKeys(Dictionary<string, string> dict)
     {
+      foreach (KeyValuePair<string, string> kvp in dict)
+      {
+        Console.WriteLine(kvp.Key);
+      }
 
     }
     public static void PrintKeysWhere(Dictionary<string, string> dict, string text)
     {
+      Dictionary<string, string>.KeyCollection keys = dict.Keys;
 
+      foreach (string key in keys)
+      {
+        if (key.Contains(text))
+        {
+          Console.WriteLine(key);
+        }
+      }
     }
 
     public static void PrintValuesOfKeysWhere(Dictionary<string, string> dict, string text)
     {
+      Dictionary<string, string>.KeyCollection keys = dict.Keys;
 
+      foreach (string key in keys)
+      {
+        if (key.Contains(text))
+        {
+          Console.WriteLine(dict[key]);
+        }
+      }
     }
   }
 }
