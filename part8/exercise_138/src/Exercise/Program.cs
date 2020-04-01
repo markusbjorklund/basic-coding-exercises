@@ -9,6 +9,15 @@ namespace Exercise
     {
       // Do something here
 
+      Dictionary<string, string> nickname = new Dictionary<string, string>();
+      nickname.Add("matthew", "matt");
+      nickname.Add("michael", "mix");
+      nickname.Add("arthur", "artie");
+
+      foreach (KeyValuePair<string, string> kvp in nickname)
+      {
+        Console.WriteLine("{0}'s nickname is {1}",
+          kvp.Key, kvp.Value);
       }
     }
   }
