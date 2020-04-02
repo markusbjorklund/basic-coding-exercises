@@ -18,7 +18,6 @@ namespace Exercise
       Console.WriteLine(mattsIOU.HowMuchDoIOweTo("Arthur"));
 
       mattsIOU.ChangeDebt("Arthur", -80);
-
       Console.WriteLine(mattsIOU.HowMuchDoIOweTo("Arthur"));
     }
   }
