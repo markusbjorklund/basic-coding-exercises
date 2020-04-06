@@ -29,7 +29,7 @@ namespace Exercise
         return true;
       }
       if (this.year == compared.year && this.month == compared.month &&
-          this.day < compared.day)
+        this.day < compared.day)
       {
         return true;
       }
@@ -39,13 +39,30 @@ namespace Exercise
     public override bool Equals(object compared)
     {
       // DO SOMETHING HERE
-      return false;
+      // return true if both values are the same
+      if (this == compared)
+      {
+        return true;
+      }
+
+      if ((compared == null) || !this.GetType().Equals(compared.GetType()))
+      {
+        return false;
+      }
+      // do some copy paste from the reading material
+      else
+      {
+        SimpleDate comparedSimpleDate = (SimpleDate)compared;
+
+        // if the values of the object variables are equal, the objects are, too
+        return this.day == comparedSimpleDate.day && this.month == comparedSimpleDate.month && this.year == comparedSimpleDate.year;
+      }
     }
 
     public override int GetHashCode()
     {
       // DO SOMETHING HERE
-      return -1;
+      return this.day.GetHashCode();
     }
   }
 }
