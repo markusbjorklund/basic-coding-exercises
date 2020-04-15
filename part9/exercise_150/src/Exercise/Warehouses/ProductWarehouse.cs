@@ -7,12 +7,14 @@ namespace Exercise
 
     public ProductWarehouse(string productName, int capacity) : base(capacity)
     {
-
+      this.productName = productName;
+      this.capacity = capacity; 
     }
 
     public override string ToString()
     {
-      return "";
+      // juice me baby, do I need a this?
+      return this.productName + ": " + base.ToString();
     }
   }
 }

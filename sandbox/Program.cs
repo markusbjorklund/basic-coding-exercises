@@ -3,26 +3,50 @@ using System.Collections.Generic;
 
 namespace testing
 {
-  public class Program
+  using System;
+  using System.Collections.Generic;
+  public class ChangeHistory
   {
-    public static void Main(string[] args)
-    {
-      Person ada = new Person("Ada Lovelace");
-      Person jack = new Person("Jack The Ripper");
-      Person mike = new Person("Mike The Incredible Magic Mouse");
+    private List<int> history;
 
-      HowManyNames(ada);
-      HowManyNames(jack);
-      HowManyNames(mike);
+    public ChangeHistory()
+    {
+      this.history = new List<int>();
     }
 
-    // Do something here
-    public static void HowManyNames(Person name)
+    public void Add(int status)
     {
-     
-      string[] parts = name.ToString().Split(" ");
-     
-      Console.WriteLine(name.ToString() + " has " + parts.Length + " names.");
+      this.history.Add(status);
+    }
+
+    public void Clear()
+    {
+      this.history.Clear();
+    }
+
+    public int MaxValue()
+    {
+      int largestValue = 0;
+      if (this.history.Count > 0)
+      {
+        largestValue = this.history.largestValue();
+      } 
+      return largestValue;
+    }
+
+    public int MinValue()
+    {
+      int smallestValue = 0;
+      if (this.history.Count > 0)
+      {
+        smallestValue = this.history.smallestValue();
+      }
+      return smallestValue;
+    }
+
+    public override string ToString()
+    {
+      return "";
     }
   }
 }
