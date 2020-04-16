@@ -18,10 +18,13 @@ namespace Exercise
       {
         int sumOfItems = 0;
 
+        // loop the list and add totals
         foreach (Item var in this.list)
         {
           sumOfItems = sumOfItems + item.weight;
         }
+
+        // if totals + weight of added item is less than box max capacity, go ahead and add the item
         if (sumOfItems + item.weight <= this.capacity)
         {
           list.Add(item);
