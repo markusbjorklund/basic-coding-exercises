@@ -19,7 +19,7 @@ namespace Exercise
         int sumOfItems = 0;
 
         // loop the list and add totals
-        foreach (Item var in this.list)
+        foreach (Item var in list)
         {
           sumOfItems = sumOfItems + item.weight;
         }
