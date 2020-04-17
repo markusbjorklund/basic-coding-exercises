@@ -20,7 +20,7 @@ namespace Exercise
 
     public override string ToString()
     {
-      return this.type + " - weight " + this.weight + " kg";
+      return this.color + " " + this.type + " - weight " + this.weight + " kg";
     }
   }
 }
