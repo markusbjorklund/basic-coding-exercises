@@ -14,12 +14,34 @@ namespace Exercise
 
     public override string ToString()
     {
-      return "";
+
+      // 11 to 14 (J, Q, K and A)
+      if (this.value == 11)
+      {
+        return this.suit + " J";
+      }
+      if (this.value == 12)
+      {
+        return this.suit + " Q";
+      }
+      if (this.value == 13)
+      {
+        return this.suit + " K";
+      }
+      if (this.value == 14)
+      {
+        return this.suit + " A";
+      }
+      return this.suit + " " + this.value;
     }
 
     public int CompareTo(Card another)
     {
-      return 0;
+      if (this.value == another.value)
+      {
+        return this.suit.CompareTo(another.suit);
+      }
+      return this.value.CompareTo(another.value);
     }
   }
 }
