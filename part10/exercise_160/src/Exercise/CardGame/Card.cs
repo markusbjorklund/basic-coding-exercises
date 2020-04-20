@@ -39,7 +39,7 @@ namespace Exercise
     {
       if (this.value == another.value)
       {
-        return this.suit.CompareTo(another.suit)  ;
+        return this.suit.CompareTo(another.suit);
       }
       return this.value.CompareTo(another.value);
     }
