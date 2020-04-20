@@ -10,8 +10,9 @@ namespace Exercise
     public Book(string name, int age)
     {
       // Fill in the blanks
+      this.name = name;
+      this.age = age;
     }
-
 
     public override string ToString()
     {
@@ -19,13 +20,15 @@ namespace Exercise
       return this.name + " (recommended for " + this.age + " year-olds or older)";
     }
 
-
     public int CompareTo(Book other)
     {
 
       // Do some magic here
-      return 0;
+      if (this.age == other.age)
+      {
+        return this.name.CompareTo(other.name);
+      }
+      return this.age - other.age;
     }
-
   }
 }
