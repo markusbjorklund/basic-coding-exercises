@@ -1,52 +1,31 @@
 ﻿using System;
 using System.Collections.Generic;
-
-namespace testing
+public class Program
 {
-  using System;
-  using System.Collections.Generic;
-  public class ChangeHistory
+  public static void Main(string[] args)
   {
-    private List<int> history;
 
-    public ChangeHistory()
-    {
-      this.history = new List<int>();
-    }
+    List<int> numbers = new List<int>();
 
-    public void Add(int status)
-    {
-      this.history.Add(status);
-    }
+    Random lotteryNumbers = new Random();
 
-    public void Clear()
+    for (int i = 0; i < 7; i++)
     {
-      this.history.Clear();
-    }
-
-    public int MaxValue()
-    {
-      int largestValue = 0;
-      if (this.history.Count > 0)
+      int number = lotteryNumbers.Next(1, 40);
       {
-        largestValue = this.history.largestValue();
-      } 
-      return largestValue;
-    }
-
-    public int MinValue()
-    {
-      int smallestValue = 0;
-      if (this.history.Count > 0)
-      {
-        smallestValue = this.history.smallestValue();
+        while (numbers.Contains(number));
+        numbers.Add(number);
       }
-      return smallestValue;
+
     }
 
-    public override string ToString()
-    {
-      return "";
-    }
+    Console.WriteLine("##############   DEBUG   ###############");
+
+    numbers.Sort();
+
+    numbers.ForEach(Console.WriteLine);
+
   }
 }
+
+
