@@ -28,6 +28,7 @@ namespace Exercise
 
     public int Read()
     {
+      // if (sensorSwitch == false)
       if (!IsOn())
       {
         throw new InvalidOperationException("Turn on the Sensor, Sensei!");

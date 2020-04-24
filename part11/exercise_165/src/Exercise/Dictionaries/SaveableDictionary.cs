@@ -7,7 +7,7 @@ namespace Exercise
   {
     private Dictionary<string, string> dict;
 
-    public string file;
+    private string file;
     string word { get; set; }
     string translation { get; set; }
 
@@ -87,7 +87,7 @@ namespace Exercise
     {
       foreach (KeyValuePair<string, string> words in this.dict)
       {
-        if (words.Value == word || words.Key == word)
+        if (words.Key == word || words.Value == word)
         {
           this.dict.Remove(words.Key);
         }
