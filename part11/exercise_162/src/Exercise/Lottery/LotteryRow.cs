@@ -39,7 +39,7 @@ namespace Exercise
 
       for (int i = 0; i < 7; i++)
       {
-        int number = lotteryNumbers.Next(1, 40);
+        int number = lotteryNumbers.Next(1, 41);
         {
           if (!this.ContainsNumber(number));
           numbers.Add(number);
