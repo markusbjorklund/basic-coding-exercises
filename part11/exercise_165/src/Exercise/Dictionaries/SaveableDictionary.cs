@@ -38,9 +38,15 @@ namespace Exercise
       try
       {
         string[] lines = File.ReadAllLines(this.file);
-        NextLine(lines);
+
+        foreach (string line in lines)
+        {
+          string[] parts = line.Split(":");
+          this.dict.Add(parts[0], parts[1]);
+        }
         return true;
       }
+
       catch (Exception e)
       {
         Console.WriteLine(e.Message);
@@ -91,18 +97,6 @@ namespace Exercise
         {
           this.dict.Remove(words.Key);
         }
-      }
-    }
-
-    // string[] parts = line.Split(":"); // split the line based on the ':' character
-    // Console.WriteLine(parts[0]); // part of line before :
-    // Console.WriteLine(parts[1]); // part of line after :
-    public void NextLine(string[] lines)
-    {
-      foreach (string line in lines)
-      {
-        string[] parts = line.Split(":");
-        this.dict.Add(parts[0], parts[1]);
       }
     }
   }
