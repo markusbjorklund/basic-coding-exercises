@@ -7,11 +7,11 @@ namespace Exercise
     public static void Main(string[] args)
     {
 
-      // assume the words.txt contains the original content.
+      // // assume the words.txt contains the original content.
       // SaveableDictionary dictionary = new SaveableDictionary("words.txt");
       // dictionary.Load();
 
-      // // Translate all the words in the file both ways
+      // // // // Translate all the words in the file both ways
       // Console.WriteLine(dictionary.Translate("apina"));
       // Console.WriteLine(dictionary.Translate("monkey"));
       // Console.WriteLine(dictionary.Translate("beer"));
@@ -19,40 +19,42 @@ namespace Exercise
       // Console.WriteLine(dictionary.Translate("below"));
       // Console.WriteLine(dictionary.Translate("alla oleva"));
 
-      // // Try adding, translating and removing a word, this should not affect the file
+      // // // // Try adding, translating and removing a word, this should not affect the file
       // dictionary.Add("poista", "remove");
       // Console.WriteLine(dictionary.Translate("remove"));
       // dictionary.Delete("remove");
 
-      // // Save the file
+      // // // // Save the file
       // dictionary.Save();
 
-      SaveableDictionary dictionary = new SaveableDictionary("words.txt");
-      bool wasSuccessful = dictionary.Load();
+      // SaveableDictionary dictionary = new SaveableDictionary("words.txt");
+      // bool wasSuccessful = dictionary.Load();
 
-      if (wasSuccessful)
-      {
-        Console.WriteLine("Successfully loaded the dictionary from file");
-      }
+      // if (wasSuccessful)
+      // {
+      //   Console.WriteLine("Successfully loaded the dictionary from file");
+      // }
+
+      // Console.WriteLine(dictionary.Translate("apina"));
+      // Console.WriteLine(dictionary.Translate("ohjelmointi"));
+      // Console.WriteLine(dictionary.Translate("alla oleva"));
+
+      SaveableDictionary dictionary = new SaveableDictionary();
+      dictionary.Add("apina", "monkey");
+      dictionary.Add("banaani", "banana");
+      dictionary.Add("apina", "apfe");
+      dictionary.Add("ohjelmointi", "programming");
+
+      dictionary.Delete("apina");
 
       Console.WriteLine(dictionary.Translate("apina"));
+      Console.WriteLine(dictionary.Translate("monkey"));
+      Console.WriteLine(dictionary.Translate("banana"));
+      Console.WriteLine(dictionary.Translate("banaani"));
       Console.WriteLine(dictionary.Translate("ohjelmointi"));
-      Console.WriteLine(dictionary.Translate("alla oleva"));
-
-      // SaveableDictionary dictionary = new SaveableDictionary();
-      // dictionary.Add("apina", "monkey");
-      // dictionary.Add("banaani", "banana");
-      // dictionary.Add("apina", "apfe");
-      // dictionary.Add("ohjelmointi", "programming");
 
       // dictionary.Delete("apina");
       // dictionary.Delete("banana");
-
-      // Console.WriteLine(dictionary.Translate("apina"));
-      // Console.WriteLine(dictionary.Translate("monkey"));
-      // Console.WriteLine(dictionary.Translate("banana"));
-      // Console.WriteLine(dictionary.Translate("banaani"));
-      // Console.WriteLine(dictionary.Translate("ohjelmointi"));
 
       // SaveableDictionary dictionary = new SaveableDictionary();
       // dictionary.Add("apina", "monkey");

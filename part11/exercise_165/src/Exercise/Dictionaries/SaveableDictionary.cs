@@ -60,14 +60,14 @@ namespace Exercise
       {
         StreamWriter writer = new StreamWriter(this.file);
 
-        foreach (KeyValuePair<string, string> words in this.dict)
+        foreach (var words in this.dict)
         {
           writer.WriteLine(words.Key + ":" + words.Value);
         }
         writer.Close();
         return true;
       }
-      catch (Exception e)
+      catch (Exception)
       {
         return false;
       }
@@ -79,7 +79,7 @@ namespace Exercise
       {
         return this.dict[word];
       }
-      foreach (KeyValuePair<string, string> words in this.dict)
+      foreach (var words in this.dict)
       {
         if (words.Value == word)
         {
@@ -91,7 +91,7 @@ namespace Exercise
 
     public void Delete(string word)
     {
-      foreach (KeyValuePair<string, string> words in this.dict)
+      foreach (var words in this.dict)
       {
         if (words.Key == word || words.Value == word)
         {
