@@ -13,13 +13,13 @@ namespace Exercise
       {
         throw new ArgumentException("Wrong range for age!");
       }
+      this.age = age;
 
       if (name == "" || name == null || name.Length > 40)
       {
         throw new ArgumentException("Name is empty or too long!");
       }
       this.name = name;
-      this.age = age;
     }
   }
 }
