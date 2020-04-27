@@ -1,3 +1,6 @@
 apina:monkey
+monkey:apina
 alla oleva:below
+below:alla oleva
 olut:beer
+beer:olut

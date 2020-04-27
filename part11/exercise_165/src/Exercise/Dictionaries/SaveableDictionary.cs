@@ -26,10 +26,10 @@ namespace Exercise
       this.word = word;
       this.translation = translation;
 
-      if (this.dict.ContainsKey(word)) { }
-      else
+      if (!this.dict.ContainsKey(word) && !this.dict.ContainsKey(translation))
       {
         this.dict.Add(word, translation);
+        this.dict.Add(translation, word);
       }
     }
 
@@ -42,7 +42,11 @@ namespace Exercise
         foreach (string line in lines)
         {
           string[] parts = line.Split(":");
-          this.dict.Add(parts[0], parts[1]);
+          if (!this.dict.ContainsKey(parts[0]) && !this.dict.ContainsKey(parts[1]))
+          {
+            this.dict.Add(parts[0], parts[1]);
+            this.dict.Add(parts[1], parts[0]);
+          }
         }
         return true;
       }
@@ -78,13 +82,6 @@ namespace Exercise
       if (this.dict.ContainsKey(word))
       {
         return this.dict[word];
-      }
-      foreach (var words in this.dict)
-      {
-        if (words.Value == word)
-        {
-          return words.Key;
-        }
       }
       return null;
     }
