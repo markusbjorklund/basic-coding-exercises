@@ -8,8 +8,6 @@ namespace Exercise
     private Dictionary<string, string> dict;
 
     private string file;
-    string word { get; set; }
-    string translation { get; set; }
 
     public SaveableDictionary()
     {
@@ -23,9 +21,6 @@ namespace Exercise
 
     public void Add(string word, string translation)
     {
-      this.word = word;
-      this.translation = translation;
-
       if (!this.dict.ContainsKey(word) && !this.dict.ContainsKey(translation))
       {
         this.dict.Add(word, translation);
@@ -42,12 +37,16 @@ namespace Exercise
         foreach (string line in lines)
         {
           string[] parts = line.Split(":");
-          if (!this.dict.ContainsKey(parts[0]) && !this.dict.ContainsKey(parts[1]))
-          {
-            this.dict.Add(parts[0], parts[1]);
-            this.dict.Add(parts[1], parts[0]);
-          }
+
+          // nicer way to do it
+          string word = parts[0];
+          string translation = parts[1];
+          Add(word, translation);
         }
+        // if (!this.dict.ContainsKey(parts[0]) && !this.dict.ContainsKey(parts[1]))
+        // {
+        //   this.dict.Add(parts[0], parts[1]);
+        //   this.dict.Add(parts[1], parts[0]);
         return true;
       }
 
@@ -60,13 +59,22 @@ namespace Exercise
 
     public bool Save()
     {
+      List<string> alreadySaved = new List<string>();
       try
       {
         StreamWriter writer = new StreamWriter(this.file);
 
-        foreach (var words in this.dict)
+        foreach (string word in this.dict.Keys)
         {
-          writer.WriteLine(words.Key + ":" + words.Value);
+          string composition = word + ":" + this.dict[word];
+          string backwards = this.dict[word] + ":" + word;
+          if (!alreadySaved.Contains(composition) && !alreadySaved.Contains(backwards))
+          {
+            alreadySaved.Add(composition);
+            writer.WriteLine(composition);  
+          }
+
+          // writer.WriteLine(words.Key + ":" + words.Value);
         }
         writer.Close();
         return true;
@@ -75,6 +83,18 @@ namespace Exercise
       {
         return false;
       }
+
+      //   foreach (var words in this.dict)
+      //   {
+      //     writer.WriteLine(words.Key + ":" + words.Value);
+      //   }
+      //   writer.Close();
+      //   return true;
+      // }
+      // catch (Exception)
+      // {
+      //   return false;
+      // }
     }
 
     public string Translate(string word)
@@ -88,12 +108,19 @@ namespace Exercise
 
     public void Delete(string word)
     {
-      foreach (var words in this.dict)
+      // both works
+      // foreach (var words in this.dict)
+      // {
+      //   if (words.Key == word || words.Value == word)
+      //   {
+      //     this.dict.Remove(words.Key);
+      //   }
+      // }
+      if (this.dict.ContainsKey(word))
       {
-        if (words.Key == word || words.Value == word)
-        {
-          this.dict.Remove(words.Key);
-        }
+        string translation = this.dict[word];
+        this.dict.Remove(word);
+        this.dict.Remove(translation);
       }
     }
   }

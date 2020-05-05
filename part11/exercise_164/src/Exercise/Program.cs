@@ -18,7 +18,7 @@ namespace Exercise
       // Console.WriteLine(ten.IsOn());
 
       TemperatureSensor temperatureSensor = new TemperatureSensor();
-      // temperatureSensor.SetOn();
+      temperatureSensor.SetOn();
       Console.WriteLine(temperatureSensor.Read());
 
     }

@@ -6,7 +6,10 @@ namespace Exercise
   {
     public static void Main(string[] args)
     {
+      SaveableDictionary dictionary = new SaveableDictionary("words.txt");
+      bool wasSuccessful = dictionary.Load();
 
+<<<<<<< HEAD
       // // assume the words.txt contains the original content.
       SaveableDictionary dictionary = new SaveableDictionary("words.txt");
       dictionary.Load();
@@ -66,6 +69,20 @@ namespace Exercise
       // Console.WriteLine(dictionary.Translate("ohjelmointi"));
       // Console.WriteLine(dictionary.Translate("banana"));
 
+=======
+      if (wasSuccessful)
+      {
+        Console.WriteLine("Successfully loaded the dictionary from file");
+      }
+      else
+      {
+        Console.WriteLine("File not loaded!");
+      }
+
+      Console.WriteLine(dictionary.Translate("apina"));
+      Console.WriteLine(dictionary.Translate("ohjelmointi"));
+      Console.WriteLine(dictionary.Translate("alla oleva"));
+>>>>>>> c41c326b51267b8a870cd7add7774b5bfb1e0b12
     }
   }
 }

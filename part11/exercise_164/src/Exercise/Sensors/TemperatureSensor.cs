@@ -29,13 +29,14 @@ namespace Exercise
     public int Read()
     {
       // if (sensorSwitch == false)
-      if (!IsOn())
+      if (!this.sensorSwitch)
       {
         throw new InvalidOperationException("Turn on the Sensor, Sensei!");
       }
       Random rand = new Random();
-      int temp = rand.Next((61) - 30);
-      return temp;
+      // int temp = rand.Next(-30, 31);
+      // return temp;
+      return rand.Next(-30, 31);
     }
   }
 }
