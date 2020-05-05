@@ -1,6 +1,9 @@
 namespace Exercise
 {
-  // using something...
+  using System.Collections.Generic;
+  using System;
+  using System.Linq;
+  using System.Text.RegularExpressions;
 
   public class Program
   {
@@ -17,8 +20,10 @@ namespace Exercise
 
       Regex rgx = new Regex("needs");
 
-      foreach (string sentence in stringList) {
-        if (rgx.IsMatch(sentence)) {
+      foreach (string sentence in stringList)
+      {
+        if (rgx.IsMatch(sentence))
+        {
           Console.WriteLine(sentence);
         }
       }
