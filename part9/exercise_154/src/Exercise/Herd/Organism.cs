@@ -19,7 +19,7 @@ namespace Exercise
 
     public override string ToString()
     {
-      return "x: " + this.x + "," + " y: " + this.y;
+      return "x: " + this.x + ";" + " y: " + this.y;
     }
   }
 }

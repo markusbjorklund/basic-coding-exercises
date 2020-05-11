@@ -34,7 +34,7 @@ namespace Exercise
       {
         herdPosition += movable.ToString() + "\n";
       }
-      return herdPosition;
+      return herdPosition.ToString();
     }
   }
 }

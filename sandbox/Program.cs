@@ -1,32 +1,84 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-public class Program
+using System.Text.RegularExpressions;
+
+namespace sandbox
 {
-  public static void Main(string[] args)
+  class Program
   {
-    Console.WriteLine("##############   DEBUG   ###############");
-    Console.WriteLine();
-
-    string[] lines = File.ReadAllLines("words.txt");
-
-    foreach (string line in lines)
+    static void Main(string[] args)
     {
+      string wildAnimals = "1 - Wolf \n2 - Tiger \n3 - Bear \n";
+      string tameAnimals = "4 - Bird \n5 - Cat \n6 - Dog \n7 - Horse";
+      string wildHunts = "M - Make sound \nH - Hunt";
+      string tameEats = "E - Eat \nT - Talk to owner \nM - Make sound \nN - Give name";
 
-    string[] parts = line.Split(":"); // split the line based on the ':' character
+      string question = "What do you want to do?";
+      string initialOptions = "Q - Quit \nL - List all animals";
 
-    Console.WriteLine(parts[0]); // part of line before :
-    Console.WriteLine(parts[1]); // part of line after :
+      Console.WriteLine(question);
+      Console.WriteLine(initialOptions);
 
+      while (true)
+      {
+        string navigation = Console.ReadLine();
+        navigation.ToString();
+
+        // quit on Q or q
+        if (navigation == "Q" || navigation == "q")
+        {
+          break;
+        }
+
+        // list animals
+        if (navigation == "L" || navigation == "l")
+        {
+          Console.WriteLine(wildAnimals + tameAnimals);
+        }
+
+        /* wolf */
+        if (navigation == "1")
+        {
+          Wolf Wolf = new Wolf() )
+          Console.WriteLine(question + "\n" + wildHunts);
+        }
+        /* Tiger */
+        if (navigation == "2")
+        {
+          // you have chosen tiger
+          Console.WriteLine(question + "\n" + wildHunts);
+        }
+        /* Bear */
+        if (navigation == "3")
+        {
+          // you have chosen bear
+          Bear Bear = new Bear();
+          Console.WriteLine(question + "\n" + wildHunts);
+
+        }
+
+        /* Bird */
+        if (navigation == "4")
+        {
+          Console.WriteLine(question + "\n" + tameEats);
+        }
+        /* Cat */
+        if (navigation == "5")
+        {
+          Console.WriteLine(question + "\n" + tameEats);
+        }
+        /* Dog */
+        if (navigation == "6")
+        {
+          Console.WriteLine(question + "\n" + tameEats);
+        }
+        /* Horse */
+        if (navigation == "7")
+        {
+          Console.WriteLine(question + "\n" + tameEats);
+        }
+      }
     }
-
-    // string[] parts = line.split(":"); // split the line based on the ':' character
-
-    // Console.WriteLine(parts[0]); // part of line before :
-    // Console.WriteLine(parts[1]); // part of line after :
-
-    Console.WriteLine();
-    Console.WriteLine("##############   DEBUG   ###############");
-
   }
 }
