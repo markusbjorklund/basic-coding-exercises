@@ -6,13 +6,14 @@ namespace Exercise
   {
     public static void Main(string[] args)
     {
+
       SaveableDictionary dictionary = new SaveableDictionary("words.txt");
       bool wasSuccessful = dictionary.Load();
 
-<<<<<<< HEAD
-      // // assume the words.txt contains the original content.
-      SaveableDictionary dictionary = new SaveableDictionary("words.txt");
-      dictionary.Load();
+      if (wasSuccessful)
+      {
+        Console.WriteLine("Successfully loaded the dictionary from file");
+      }
 
       // // // // // Translate all the words in the file both ways
       Console.WriteLine(dictionary.Translate("apina"));
@@ -29,14 +30,6 @@ namespace Exercise
 
       // // // // // Save the file
       dictionary.Save();
-
-      // SaveableDictionary dictionary = new SaveableDictionary("words.txt");
-      // bool wasSuccessful = dictionary.Load();
-
-      // if (wasSuccessful)
-      // {
-      //   Console.WriteLine("Successfully loaded the dictionary from file");
-      // }
 
       // Console.WriteLine(dictionary.Translate("apina"));
       // Console.WriteLine(dictionary.Translate("ohjelmointi"));
@@ -69,7 +62,6 @@ namespace Exercise
       // Console.WriteLine(dictionary.Translate("ohjelmointi"));
       // Console.WriteLine(dictionary.Translate("banana"));
 
-=======
       if (wasSuccessful)
       {
         Console.WriteLine("Successfully loaded the dictionary from file");
@@ -78,11 +70,9 @@ namespace Exercise
       {
         Console.WriteLine("File not loaded!");
       }
-
       Console.WriteLine(dictionary.Translate("apina"));
       Console.WriteLine(dictionary.Translate("ohjelmointi"));
       Console.WriteLine(dictionary.Translate("alla oleva"));
->>>>>>> c41c326b51267b8a870cd7add7774b5bfb1e0b12
     }
   }
 }
